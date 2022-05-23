@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <span class="navbar-brand mb-0 h1">HYPERLOOP</span>
+    </nav>
+    <br />
+    <h1 class="text-center">Contact Form</h1>
+    <div class="container">
+      <form class="was-validated" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+          <label
+            for="fname"
+            style="font-weight: bold; font-size: 20px; margin: 6px; color: blue"
+            >Your Name</label
+          >
+          <input
+            name="name"
+            type="text"
+            id="fname"
+            class="form-control"
+            placeholder="Your Name"
+            required
+          />
+
+          <label
+            for="exampleInputEmail1"
+            style="font-weight: bold; font-size: 20px; margin: 6px; color: blue"
+            >Your Email</label
+          >
+          <input
+            name="email"
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Enter email"
+            required
+          />
+          <label
+            for="froll"
+            style="font-weight: bold; font-size: 20px; margin: 6px; color: blue"
+            >Enter a Roll Number</label
+          >
+          <input
+            type="text"
+            id="roll"
+            name="roll"
+            class="form-control"
+            placeholder="200040109"
+            required
+          />
+          <label
+            for="fphone"
+            style="font-weight: bold; font-size: 20px; margin: 6px; color: blue"
+            >Enter a phone number:</label
+          >
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            class="form-control"
+            placeholder="9999999999"
+            pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+            required
+          />
+          <label
+            for="country"
+            style="font-weight: bold; font-size: 20px; margin: 6px; color: blue"
+            >Select Journey</label
+          >
+          <select id="dropdown" name="dropdown" class="form-control">
+            <option value="australia">Mumbai-Delhi</option>
+            <option value="canada">Mumbai-Chennai</option>
+            <option value="usa">Chennai-Kolkata</option>
+          </select>
+          <label
+            style="font-weight: bold; font-size: 20px; margin: 6px; color: blue"
+          >
+            Gender
+          </label>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              name="checkbox1"
+              value=""
+              id="defaultCheck1"
+            />
+            <label class="form-check-label" for="defaultCheck1"> Male </label>
+            <br />
+            <input
+              class="form-check-input"
+              type="checkbox"
+              name="checkbox2"
+              value=""
+              id="defaultCheck1"
+            />
+            <label class="form-check-label" for="defaultCheck1"> Female </label>
+            <br />
+            <input
+              class="form-check-input"
+              type="checkbox"
+              name="checkbox3"
+              value=""
+              id="defaultCheck1"
+            />
+            <label class="form-check-label" for="defaultCheck1"> Others </label>
+            <br />
+          </div>
+
+          <label
+            for="subject"
+            style="font-weight: bold; font-size: 20px; margin: 6px; color: blue"
+          >
+            Subject
+          </label>
+          <textarea
+            name="subject"
+            class="form-control"
+            id="subject"
+            name="subject"
+            placeholder="Write Something..."
+            style="height: 200px"
+            required
+          ></textarea>
+
+          <input
+            type="submit"
+            class="btn btn-success btn-lg mt-1 ml-4"
+            value="submit"
+          />
+        </div>
+      </form>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
